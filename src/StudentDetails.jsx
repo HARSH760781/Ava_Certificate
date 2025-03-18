@@ -58,10 +58,9 @@ const StudentDetails = () => {
 
               // Trim the duration value to extract content inside [ ]
               if (header === "duration") {
-                const match = value.match(/\[(.*?)\]/);
-                value = match ? match[1] : value;
+                const match = value.match(/\[(.*?)]?$/); // Capture content after `[`
+                value = match ? match[1].trim() : value; // Remove `]` if present
               }
-
               obj[header] = value;
               return obj;
             }, {});
@@ -82,7 +81,7 @@ const StudentDetails = () => {
     return (
       <div className="loader-container">
         <div className="loader"></div>
-        <p className="loading-text">Fetching student details...</p>
+        <p className="loading-text">Fetching Certificate details...</p>
       </div>
     );
 
@@ -90,7 +89,9 @@ const StudentDetails = () => {
     return (
       <div className="loader-container">
         <div className="loader"></div>
-        <p className="loading-text">No student details...</p>
+        <p className="loading-text">
+          Certificate details <span style={{ color: "red" }}> Not Found</span>
+        </p>
       </div>
     );
 

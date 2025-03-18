@@ -32,6 +32,7 @@ body {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     padding: 10px;
+    padding-bottom: 32px;
     border-radius: 12px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     max-width: 500px;
@@ -74,7 +75,7 @@ body {
   
   /* Different color for 'Intern' */
   .logo_write span:nth-child(3) {
-    color: #1100ff;
+    color: #0f52ba;
     letter-spacing: 0;
   }
   
@@ -145,6 +146,7 @@ body {
   }
   .loader-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -170,6 +172,7 @@ body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 25px;
     font-weight: bold;
+    text-align: center;
     color: #0d47a1;
   }
   .social-media {
