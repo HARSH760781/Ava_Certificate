@@ -124,7 +124,7 @@ const StudentDetails = () => {
             <span>Intern</span>
           </div>
 
-          <h2>🎓 Verified Certificate</h2>
+          <h2> Verified Certificate</h2>
           <table className="student-table">
             <tbody>
               {fieldOrder
